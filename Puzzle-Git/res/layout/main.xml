@@ -3,10 +3,42 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
-
+	<LinearLayout android:orientation="horizontal"
+    	android:layout_width="wrap_content"
+	    android:layout_height="180dip">
+		<ImageView android:id="@+id/viewShow"
+		    android:layout_width="150dip"
+		    android:layout_height="150dip" />
+		<LinearLayout android:orientation="vertical"
+    		android:layout_width="100dip"
+	    	android:layout_height="fill_parent"
+		    android:layout_gravity="center">
+		    <TextView android:id="@+id/textViewTimer"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="10dip"
+		        android:text="11H 11M 11S" />
+		    <ImageView android:id="@+id/viewtmp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:src="@drawable/ic_launcher" />
+		    <Button android:id="@+id/buttonStart"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Start" />
+		    <Button android:id="@+id/buttonDebug"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Debug" />
+		</LinearLayout>    
+	</LinearLayout>    
+	<LinearLayout android:orientation="vertical"
+    	android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+		<zz.android.puzzle.MySurfaceView android:id="@+id/viewWorking"
+		    android:layout_width="300dip"
+		    android:layout_height="300dip"
+		    android:layout_gravity="center" />
+	</LinearLayout>    
 </LinearLayout>
